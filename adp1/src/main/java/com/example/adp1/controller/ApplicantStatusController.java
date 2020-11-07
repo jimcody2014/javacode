@@ -29,7 +29,7 @@ public class ApplicantStatusController {
     public ApplicantStatus getApplicantStatusById(@PathVariable(value = "id") Long applicantStatusId) {
             return this.applicantStatusService.getApplicantStatusById(applicantStatusId);	
     }
-    
+    //
  // Create a new ApplicantStatus
     @PostMapping("/applicantstatus")
     public ApplicantStatus createApplicantStatus(@Valid @RequestBody ApplicantStatus newApplicantStatus) {
