@@ -63,11 +63,12 @@ public class Applicant implements Serializable {
     @Column(name = "everifyid")
     private Long everifyid;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY) // Change this to eager if you want to pull back reviewer name, etc. 
     @JoinColumn(name = "reviewerid", nullable = true, insertable = false, updatable = false)
     @JsonIgnore
     private Reviewer reviewer;
     
+    @NotNull
     @Column(name = "reviewerid")
     private Long reviewerid;
     
