@@ -23,7 +23,7 @@ public class ReviewerController {
     @Autowired
     private ReviewerService reviewerService;
 
-    // Get All Reviewer Records
+    // Get All Reviewer Records  QDSL
     @GetMapping("/reviewer")
     @ResponseBody
     public Iterable<Reviewer> getAllReviewers(@QuerydslPredicate(root = Reviewer.class) Predicate predicate, Pageable pageable) {
